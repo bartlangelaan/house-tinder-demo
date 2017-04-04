@@ -29,7 +29,8 @@
     "react-dom": "15.3.0",
     "react-router": "2.6.1",
     "react-swipe-card": "^0.1.4",
-    "react-toolbox": "^2.0.0-beta.7"
+    "react-toolbox": "^2.0.0-beta.7",
+    "screenfull": "^3.1.0"
   },
   "devDependencies": {
     "enzyme": "2.4.1",

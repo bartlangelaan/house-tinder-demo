@@ -3,6 +3,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Root from './Root';
+import screenfull from 'screenfull';
 
 const root = document.querySelector('#root');
 
@@ -24,3 +25,9 @@ if (module.hot) {
 }
 
 mount(Root);
+
+window.addEventListener("load", function load(event){
+  window.dispatchEvent(new Event('resize'))
+});
+
+document.body.addEventListener('click', () => screenfull.request());

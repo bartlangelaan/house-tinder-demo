@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import images from '../../content/images';
 import Results from '../Results';
 import { Button } from 'react-toolbox/lib/button';
-import Card from 'react-toolbox/lib/card';
 import styles from './styles.css';
 import DraggableCard from 'react-swipe-card/DraggableCard';
 
