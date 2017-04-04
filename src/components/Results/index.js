@@ -5,7 +5,8 @@ import ProgressBar from 'react-toolbox/lib/progress_bar';
 import styles from './styles.css';
 
 const aspects = {
-  modern: 'Klassiek - Modern'
+  modern: 'Klassiek - Modern',
+  cluttered: 'Minimalistisch - Druk',
 };
 
 function Results() {
@@ -14,7 +15,7 @@ function Results() {
     const average = mean(
       images
         .filter(image => typeof image.liked !== 'undefined')
-        .filter(image => image.stats[aspect] !== null)
+        .filter(image => typeof image.stats[aspect] !== 'undefined')
         .map(image => {
           const photoValue = image.stats[aspect];
           if(image.liked) return photoValue;
@@ -23,7 +24,7 @@ function Results() {
     );
 
     return (
-      <div key={aspect}>
+      <div key={aspect} className={styles.aspectWrapper}>
         <h3>
           {aspects[aspect].split(' - ')[0]}
           <span className={styles.right}>{aspects[aspect].split(' - ')[1]}</span>
@@ -34,7 +35,7 @@ function Results() {
   });
 
   return (
-    <div>
+    <div className={styles.resultsWrapper}>
       {ratings}
     </div>
   );

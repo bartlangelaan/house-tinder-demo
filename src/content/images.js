@@ -1,6 +1,6 @@
 /**
  *
- * @type {[{image: String, stats: {modern: Number}, liked: Boolean}]}
+ * @type {[{image: String, stats: {modern: Number, cluttered: Number}, liked: Boolean}]}
  */
 const images = [
   {
@@ -25,6 +25,12 @@ const images = [
     image: require('../images/4.jpg'),
     stats: {
       modern: 0
+    }
+  },
+  {
+    image: require('../images/5.jpg'),
+    stats: {
+      cluttered: 1,
     }
   },
 ];
