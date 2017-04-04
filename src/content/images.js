@@ -31,6 +31,14 @@ const images = [
     image: require('../images/5.jpg'),
     stats: {
       cluttered: 1,
+      modern: 0.35
+    }
+  },
+  {
+    image: require('../images/6.jpg'),
+    stats: {
+      cluttered: 0,
+      modern: 0.65
     }
   },
 ];
