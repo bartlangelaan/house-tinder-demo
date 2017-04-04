@@ -1,0 +1,87 @@
+:global html, :global body, :global #root {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+:global .animate {
+  transition: transform 0.3s;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  width: 200vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--color-primary);
+
+  justify-content: space-around;
+
+transition: transform .3s;
+
+  &.showResults {
+    transform: translateX(-100vw);
+  }
+}
+
+.innerWrapper {
+  width: 90vw;
+  height: 90vh;
+  background: white;
+  padding: 2.5vw;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+img {
+  max-width: 500px;
+}
+
+.appCard {
+  padding: 10px;
+  max-width: 520px;
+}
+
+.button {
+  float: left;
+}
+.button:last-child {
+  float: right;
+}
+
+.imageContainer {
+  width: 90vw;
+  height: 90vw;
+  position: relative;
+}
+
+.imageContainer > div {
+  position: absolute;
+}
+
+.image {
+  width: 90vw;
+  height: 90vw;
+  background-size: cover;
+}
+
+.imageWrapper {
+  transition: opacity 0.3s, transform 0.3s;
+
+  &.notActive {
+    opacity: 0;
+    pointer-events: none;
+
+    &.swipeLeft {
+      transform: translateX(-100vw)
+    }
+
+    &.swipeRight {
+      transform: translateX(100vw)
+    }
+  }
+}
